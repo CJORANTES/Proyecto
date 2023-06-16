@@ -93,6 +93,11 @@ public class CrearProfesor extends javax.swing.JFrame {
         CorreoInput.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
 
         GeneroInput.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        GeneroInput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GeneroInputActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -194,6 +199,10 @@ public class CrearProfesor extends javax.swing.JFrame {
         AdministradorProfesores ap = new AdministradorProfesores();
         ap.setVisible(true);
     }//GEN-LAST:event_formWindowClosing
+
+    private void GeneroInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneroInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GeneroInputActionPerformed
 
     /**
      * @param args the command line arguments

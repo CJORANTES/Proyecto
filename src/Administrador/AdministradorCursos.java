@@ -28,10 +28,8 @@ public class AdministradorCursos extends javax.swing.JFrame {
 
     public static String codigo;
     public static String nombre;
-    public static String apellido;
-    public static String correo;
-    public static String contrasenia;
-    public static String genero;
+    public static String credito;
+    public static String profesor;
 
     /**
      * Creates new form AdministradorCursos
@@ -156,24 +154,23 @@ public class AdministradorCursos extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(CrearProfBtn)
-                                .addGap(26, 26, 26)
-                                .addComponent(ActualizarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(EliminarBtn)
-                                .addGap(72, 72, 72)
-                                .addComponent(CargaMBtn))
-                            .addComponent(ExportarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                        .addComponent(jButton1))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(CrearProfBtn)
+                        .addGap(26, 26, 26)
+                        .addComponent(ActualizarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(EliminarBtn)
+                        .addGap(72, 72, 72)
+                        .addComponent(CargaMBtn))
+                    .addComponent(ExportarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +183,7 @@ public class AdministradorCursos extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
-                        .addGap(18, 18, 18)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
@@ -203,7 +200,7 @@ public class AdministradorCursos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(51, 51, 51)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -212,8 +209,8 @@ public class AdministradorCursos extends javax.swing.JFrame {
     private void CrearProfBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearProfBtnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        //CrearCurso cp = new CrearCurso();
-        //cp.setVisible(true);
+        CrearCurso cp = new CrearCurso();
+        cp.setVisible(true);
     }//GEN-LAST:event_CrearProfBtnActionPerformed
 
     private void EliminarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarBtnActionPerformed
@@ -240,20 +237,19 @@ public class AdministradorCursos extends javax.swing.JFrame {
 
         codigo = ListadoCursos.getModel().getValueAt(fila, 0).toString();
         nombre = ListadoCursos.getModel().getValueAt(fila, 1).toString();
-        apellido = ListadoCursos.getModel().getValueAt(fila, 2).toString();
-        correo = ListadoCursos.getModel().getValueAt(fila, 3).toString();
-        contrasenia = ListadoCursos.getModel().getValueAt(fila, 4).toString();
-        genero = ListadoCursos.getModel().getValueAt(fila, 5).toString();
+        credito = ListadoCursos.getModel().getValueAt(fila, 2).toString();
+        profesor = ListadoCursos.getModel().getValueAt(fila, 3).toString();
+        //contrasenia = ListadoCursos.getModel().getValueAt(fila, 4).toString();
+        //genero = ListadoCursos.getModel().getValueAt(fila, 5).toString();
 
         this.setVisible(false);
-        /*ActualizarCurso ap = new ActualizarCurso();
+        ActualizarCurso ap = new ActualizarCurso();
         ap.setVisible(true);
-         */
+       
     }//GEN-LAST:event_ActualizarBtnActionPerformed
 
     private void CargaMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargaMBtnActionPerformed
         // TODO add your handling code here:
-        System.out.println("holaa");
 
         JFileChooser fc = new JFileChooser();
         fc.showOpenDialog(null);
@@ -264,7 +260,6 @@ public class AdministradorCursos extends javax.swing.JFrame {
         BufferedReader reader = null;
         String line = "";
 
-        contadorCursos = 0;
 
         try {
             reader = new BufferedReader(new FileReader(filePath));

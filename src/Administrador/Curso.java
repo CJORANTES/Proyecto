@@ -19,6 +19,12 @@ public class Curso {
         this.alumnos = alumnos;
         this.profesor = profesor;
     }
+    public Curso(String codigo, String nombre, String creditos, String profesor) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.profesor = profesor;
+    }
     
     
     

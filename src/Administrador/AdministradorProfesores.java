@@ -243,7 +243,6 @@ public class AdministradorProfesores extends javax.swing.JFrame {
 
     private void CargaMBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargaMBtnActionPerformed
         // TODO add your handling code here:
-        System.out.println("holaa");
 
         JFileChooser fc = new JFileChooser();
         fc.showOpenDialog(null);
